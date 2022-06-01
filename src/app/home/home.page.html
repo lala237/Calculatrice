@@ -1,0 +1,93 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calculatrice</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <div class="calc-main">
+    <div class="calc-display">
+      <ion-input type="ion-text-end" [(ngModel)]="display" class="ion-text-end"></ion-input>
+    </div>
+    <ion-grid>
+
+
+         <ion-row>
+        <ion-col>
+          <ion-button shape="round" color="ligth" *ngIf="!isc" (click)="click('ac')">AC</ion-button>
+          <ion-button shape="round" color="ligth" *ngIf="isc" (click)="click('c')">C</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('+/-')">+/-</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('%')">%</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="warning" (click)="click(':')">/</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('1')">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('2')">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('3')">3</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('+')">+</ion-button>
+        </ion-col>
+      </ion-row>
+
+        <ion-row>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('4')">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('5')">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('6')">6</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('-')">-</ion-button>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('7')">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('8')">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('9')">9</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click('x')">*</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button  shape="round" color="light" (click)="click('0')">0</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="light" (click)="click(',')">.</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="btn" shape="round" color="warning" (click)="click('=')">=</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>ss
